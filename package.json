@@ -1,0 +1,31 @@
+{
+  "name": "discordbot",
+  "version": "1.0.0",
+  "description": "Simpler Discord Bot",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Abhishek-Gaire/Discord-Bot.git"
+  },
+  "keywords": [
+    "Discord",
+    "Bot",
+    "Discord",
+    "Bot"
+  ],
+  "author": "Abhishek Gaire",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abhishek-Gaire/Discord-Bot/issues"
+  },
+  "homepage": "https://github.com/Abhishek-Gaire/Discord-Bot#readme",
+  "dependencies": {
+    "discord.js": "^14.16.3"
+  },
+  "devDependencies": {
+    "eslint": "^9.11.1"
+  }
+}
