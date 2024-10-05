@@ -1,10 +1,36 @@
 const { Events } = require("discord.js");
+const wait = require("node:timers/promises").setTimeout;
 
 module.exports = {
   name: Events.InteractionCreate,
   async execute(interaction) {
     if (!interaction.isChatInputCommand()) return;
 
+    if (interaction.commandName === "ping") {
+      // only responds to the single user if ephemeral is true
+      // await interaction.reply({ content: "Secret Pong!", ephemeral: true });
+
+      // await wait(2_000);
+
+      //edits the reply
+      // await interaction.editReply("Pong Again");
+
+      // // if the bot takes more than 3 seconds to reply , it will be considered a failure(token invalidated)
+      // // to not consider as a failure , you can use the `interaction.deferReply()` method before the delay
+
+      // await interaction.deferReply();
+      // // for deferReply to be ephemeral you need to use `await interaction.deferReply({ephemeral:true})
+
+      // await wait(4_000);
+      // await interaction.editReply("Pong!");
+
+      await interaction.reply("Pong!");
+      // for follow up messages
+      await interaction.followUp("Pong Again!");
+
+      // to delete the responses
+      await interaction.deleteReply();
+    }
     const command = interaction.client.commands.get(interaction.commandName);
 
     if (!command) {
